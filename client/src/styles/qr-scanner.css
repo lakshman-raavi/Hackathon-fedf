@@ -1,0 +1,220 @@
+/* QR Scanner modal and styling */
+.qr-scanner-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.qr-scanner-content {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  max-width: 400px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.qr-scanner-header {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.qr-scanner-header h2 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.qr-close-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.qr-close-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.qr-scanner-body {
+  padding: 30px 20px;
+}
+
+.qr-success {
+  text-align: center;
+  padding: 20px;
+}
+
+.success-icon {
+  font-size: 48px;
+  color: #4caf50;
+  margin-bottom: 15px;
+}
+
+.qr-success h3 {
+  margin: 0 0 10px 0;
+  color: #333;
+  font-size: 18px;
+}
+
+.qr-success p {
+  margin: 8px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.event-name {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 700;
+  font-size: 16px !important;
+}
+
+.success-message {
+  color: #4caf50;
+  font-weight: 600;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.qr-instruction {
+  margin-bottom: 20px;
+}
+
+.qr-instruction p {
+  margin: 0;
+  color: #666;
+  font-size: 14px;
+  text-align: center;
+}
+
+.qr-form {
+  margin-bottom: 20px;
+}
+
+.qr-form .form-group {
+  margin-bottom: 15px;
+}
+
+.qr-form label {
+  display: block;
+  margin-bottom: 8px;
+  color: #555;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.qr-input {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  font-family: "Geist", sans-serif;
+  box-sizing: border-box;
+  transition: all 0.3s;
+}
+
+.qr-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.qr-error {
+  background: #fee;
+  color: #c33;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 13px;
+  margin-bottom: 15px;
+  border-left: 4px solid #c33;
+}
+
+.qr-submit-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 14px;
+}
+
+.qr-submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+.qr-submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.qr-divider {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  color: #ccc;
+}
+
+.qr-divider::before,
+.qr-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background: #ddd;
+}
+
+.qr-divider span {
+  padding: 0 10px;
+  color: #999;
+  font-size: 12px;
+}
+
+.qr-camera-note {
+  background: #f0f8ff;
+  border: 1px solid #b3d9ff;
+  padding: 12px;
+  border-radius: 6px;
+}
+
+.qr-camera-note p {
+  margin: 6px 0;
+  color: #0066cc;
+  font-size: 12px;
+  text-align: center;
+}
